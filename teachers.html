@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<!--
+	Helios 1.0 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>师资队伍</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-panels.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-desktop.css" />
+        <link rel="stylesheet" href="css/style-noscript.css" />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+
+    <style type="text/css">
+        *{margin:0;padding:0;list-style-type:none;}
+        a,img{border:0;}
+        #main{width:910px;min-height:600px;margin:10px auto 0 auto;background:#fff;-moz-border-radius:12px;-khtml-border-radius: 12px;-webkit-border-radius:12px;border-radius:12px;}
+        /* nav */
+        .nav{width:160px;position:fixed;top:0;left:0;z-index:1999;background:#f0f0f0;border:1px solid #ccc;margin:20% 0 0 10px;
+            -webkit-border-radius:6px;
+            -moz-border-radius:6px;
+            border-radius:6px;
+
+            -webkit-box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
+            box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        *html,*html body{background-attachment:fixed;}
+        *html .nav{position:absolute;top:expression(eval(document.documentElement.scrollTop));}
+        .nav li{height:36px; line-height:36px; border-bottom:1px solid #d3d3d3; text-align:center; cursor:pointer}
+        .nav li:last-child{border-bottom:none}
+        .nav li a{display:block; width:98%; height:34px;font-size:16px;}
+        .nav li a:hover{background:#f9f9f9; text-decoration:none}
+        .nav li a.cur{background:#ffc}
+        /* box */
+        .box{height:700px; margin: 0 10px}
+        .box-two{height:900px; margin: 0 10px}
+        .box h3{height:32px; line-height:32px; padding-left:20px; font-size:32px; margin-bottom: 24px;}
+        .box p{line-height:30px; margin:20px;  font-size:16px}
+        .box p span{margin:10px}
+    </style>
+    <script type="text/javascript">
+        $(function(){
+
+            var pro_top = $("#pro").offset().top;
+            var news_top = $("#news").offset().top;
+            var ser_top = $("#ser").offset().top;
+            var con_top = $("#con").offset().top;
+            var job_top = $("#job").offset().top;
+            //alert(tops);
+            $(window).scroll(function(){
+                var scroH = $(this).scrollTop();
+                if(scroH>=job_top){
+                    set_cur(".job");
+                }else if(scroH>=con_top){
+                    set_cur(".con");
+                }else if(scroH>=ser_top){
+                    set_cur(".ser");
+                }else if(scroH>=news_top){
+                    set_cur(".news");
+                }else if(scroH>=pro_top){
+                    set_cur(".pro");
+                }
+            });
+
+            $(".nav li a").click(function() {
+                var el = $(this).attr('class');
+                $('html, body').animate({
+                    scrollTop: $("#"+el).offset().top
+                }, 300);
+                $(this).addClass("cur").parent().siblings().find("a").removeClass("cur");
+            });
+
+        });
+
+        function set_cur(n){
+            if($(".nav a").hasClass("cur")){
+                $(".nav a").removeClass("cur");
+            }
+            $(".nav a"+n).addClass("cur");
+        }
+    </script>
+</head>
+<body class="left-sidebar">
+
+<!-- Header -->
+<div id="header">
+
+    <!-- Inner -->
+    <div class="inner">
+        <header>
+            <h1 id="logo">数学与计算机学院</h1>
+            <hr />
+            <span class="byline">自强&nbsp;&nbsp;自立&nbsp;&nbsp; 求知&nbsp;&nbsp; 求真</span>
+        </header>
+    </div>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="survey.html">学院概况</a></li>
+            <li><a href="teachers.html">师资队伍</a></li>
+            <li>
+                <span>实验教学中心</span>
+                <ul>
+                    <li><a href="sike.html">思科网络实验室</a></li>
+                    <li><a href="wangluo.html">网络安全实验室</a></li>
+                    <li><a href="zonghe.html">综合布线与智能楼宇实验室</a></li>
+                    <li><a href="#">计算机组装与维护实验室</a></li>
+                    <li><a href="#">电子技术实验室</a></li>
+                    <li><a href="#">计算机组成原理实验室</a></li>
+                    <li><a href="#">微机原理与接口技术实验室</a></li>
+                    <li><a href="#">嵌入式与自动化实验室</a></li>
+                    <li><a href="#">RFID与物联网实验室</a></li>
+                </ul>
+            </li>
+            <li><a href="left-sidebar.html">科学研究</a></li>
+            <li><a href="right-sidebar.html">招生宣传片</a></li>
+            <li><a href="no-sidebar.html">招生就业</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+<!-- Main -->
+
+<div class="wrapper style1">
+    <h2 style="text-align: center; padding-bottom: 20px;"><strong>师资队伍</strong></h2>
+
+    <ul class="nav">
+        <li><a class="pro">正高级</a></li>
+        <li><a class="news">副高级</a></li>
+        <li><a class="ser">中级</a></li>
+        <li><a class="con">初级</a></li>
+        <li><a class="job">双师</a></li>
+    </ul>
+
+    <div id="main">
+
+        <div id="pro" class="box">
+            <h3>正高级</h3>
+            <img src="images/teacher/teacher1.jpg" alt="" class="image featured" style="float: left"/>
+            <div style="text-indent: 2em">
+                <p>
+                    <b>覃德泽</b>，教授，贺州学院数学与计算机学院党总支书记。1999年毕业于广西师范大学无线电电子学专业、计算机应用方向研究生班（脱产两年），教育部资助的高校青年骨干教师国内访问学者（武汉大学，2008.9-2009.7，脱产）。
+                </p><p>主要讲授《计算机网络工程》、《路由协议与概念》、《LAN交换与无线》、《接入WAN》等课程。研究方向为计算机网络安全、计算机网络安全风险评估等。
+            </p><p>多年来主持自治区级（省级）项目3项，参与自治区级（省级）项目4项，主持地（厅）级项目5项，参与地（厅）级项目1项；在国际国内刊物、学术会议上发布学术论文30多篇，其中独立完成或第一作者20余篇；主编高校教材2部，参编高校教材1部。
+            </p><p>主持完成的《立体化教材建设与推广应用》课题获"十一五" 广西教育科学研究优秀成果二等奖，以第二作者完成的《计算机应用基础学习网（网络版）》课件获得第十一届（2011年）全国多媒体课件大赛高教工科组二等奖。主持完成的《大学计算机基础课程改革与实践》课题获贺州学院第三届（2012年）教学成果一等奖。
+            </p><p>现任广西高教学会计算机基础教育专业委员会常务理事，贺州市计算机学会理事长，《贺州学院学报》编委。被评为2005-2007年度贺州市优秀教师，2003-2004年度梧州师专（贺州学院前身）“十佳教师”。
+            </p>
+            </div>
+        </div>
+
+        <div id="news" class="box">
+            <h3>副高级</h3>
+            <img src="images/teacher/teacher2.jpg" alt="" class="image featured" style="float: left"/>
+            <div style="text-indent: 2em">
+                <p>
+                    <b>陈科尹</b>，工学博士，数学与计算机学院物联网工程教研室主任。2014年6月博士毕业于华南农业大学农业电气化与自动化（机器视觉）。研究方向为农业机器人、机器视觉、仿生智能算法等。在国内外学术期刊，共发表学术论文11篇，其中第一作者9篇，EI收录5篇，中文核心收录3篇，科技核心收录4篇，软件著作权1项。主持广西自然科学基金项目1项，广西高校科学技术研究项目（KY2015YB304）1项，主持贺州市科技开发项目1项，主持贺州学院博士科研启动基金项目（HZUBS201403）)1项,并参与国家自然科学基金项目4项，广东省教育部产学研结合重点项目1项。
+                </p>
+            </div>
+            <hr/>
+            <img src="images/teacher/teacher5.jpg" alt="" class="image featured" style="float: left"/>
+            <div style="text-indent: 2em">
+                <p>
+                    <b>陶程仁</b>，理学学士，副教授。1986年7月毕业于广西师范大学。研究方向为数据库技术、软件理论与应用。独立完成发表学术、教研论文10篇；主持市、厅级科研项目各1项，参与区级科研项目1项、教育部项目1项，参与区教改项目1项，主持校级教改项目1项，质量工程2项；编著专著1部，主编21世纪规划教材1部。
+                </p>
+            </div>
+        </div>
+
+        <div id="ser" class="box-two">
+            <h3>中级</h3>
+            <img src="images/teacher/teacher3.jpg" alt="" class="image featured" style="float: left"/>
+            <div style="text-indent: 2em">
+                <p>
+                    <b>张波</b>，工学硕士，讲师，软件设计师，双师型教师，软件工程教研室主任，计算机科学与技术教研室主任，广西高校教师优秀共产党员。
+                    毕业于广西师范大学计算机应用技术专业。主要教授《软件工程》、《计算机导论》、《JAVA程序设计》、《Web前端开发》等课程，
+                    2015年取得甲骨文OCP认证。近年来一直指导学生参加大学生创新创业训练项目和各类软件设计大赛，指导学生项目获得2012年、2013年
+                    、2014年国家级大学生创新项目立项，2012年、2014年获得全国软件专业人才设计与创新大赛优秀指导老师。获得2012届、2013届、
+                    2014届、2015届、2016届贺州学院优秀毕业设计指导教师，2011-2012年度贺州学院优秀教师，2011-2012年度贺州学院优秀班主任，
+                    2012-2013年度贺州学院优秀学生工作者，2013年度学风建设工作先进个人，2014年度毕业生就业工作先进个人，2014-2016年度“十佳教师党员”，2016年获得广西高校优秀共产党员等荣誉。</p>
+            </div>
+            <hr/>
+            <img src="images/teacher/teacher6.jpg" alt="" class="image featured" style="float: left"/>
+            <div style="text-indent: 2em">
+                <p>
+                    <b>胡元闯</b>，工学硕士，网络工程师，数学与计算机学院网络工程教研室主任。2010年6月硕士毕业于桂林电子科技大学计算机应用技术专业。研究方向为网络协议、模型检查、软件开发的形式化方法、云计算等。在国际刊物、国内核心期刊发表过论文若干。主持和参与过多项省部级以上科研项目，其中广西自然科学基金项目“基于UPPAAL的实时系统模型检测研究”（项目编号：2014GXNSFBA118278）作为主持人现在建设当中。同时还作为负责任人对“云计算安全问题研究”的校级科研项目进行项目建设（项目编号：2014ZC25）。指导过多项大学生创新创业训练项目，获得国家级、自治区级立项。
+                </p>
+            </div>
+        </div>
+
+        <div id="con" class="box-two">
+            <h3>初级</h3>
+            <img src="images/teacher/teacher4.png" alt="" class="image featured" style="float: left"/>
+            <div style="text-indent: 2em">
+                <p>
+                    <b>李剑维</b>，工学硕士，助教，数学与计算机学院软件工程专业教师。2016年1月来校工作。2011年7月硕士于桂林电子科技大学计算机与控制学院计算机应用技术专业（物联网方向）发表论文2篇。2011.2-2014.10在广西壮族自治区政府办公厅工作，主要负责组织规划、协调指导全区政府系统政务信息化建设等；负责政府门户网站的建设运营和管理等；负责政府办公厅信息化建设等。项目经验（负责项目全流程包括需求分析、UML建模、开发管理、测试上线、运维等）；2014.10-2015.8在中国水利电力对外公司厄瓜多尔分公司，主要负责办公室、人事管理、设备采购、大宗材料贸易及清关等工作。2015.8–2015.12在广西海诚贸易有限公司技术部总监负责公司的互联网业务拓展，包括B2C项目、C2C项目等电子商务平台的建设运营和管理。
+                </p>
+            </div>
+            <hr/>
+            <img src="images/teacher/teacher7.jpg" alt="" class="image featured" style="float: left"/>
+            <div style="text-indent: 2em">
+                <p>
+                    <b>甘林</b>，管理学硕士，助理实验师，数学与计算机学院实验教学中心的实验教师，2008年7月本科毕业于湖北工业大学计算机科学与技术；2011年6月硕士毕业于南昌大学工商管理专业。研究方向主要为计算机网路，计算机网络安全等。在国内刊物发表文章4篇。第十一届全国多媒体课件大赛一等奖。
+                </p>
+            </div>
+        </div>
+
+        <div id="job" class="box">
+            <h3>双师</h3>
+            <img src="images/teacher/teacher3.jpg" alt="" class="image featured" style="float: left"/>
+            <div style="text-indent: 2em">
+                <p>
+                    <b>张波</b>，工学硕士，讲师，软件设计师，双师型教师，软件工程教研室主任，计算机科学与技术教研室主任，广西高校教师优秀共产党员。
+                    毕业于广西师范大学计算机应用技术专业。主要教授《软件工程》、《计算机导论》、《JAVA程序设计》、《Web前端开发》等课程，
+                    2015年取得甲骨文OCP认证。近年来一直指导学生参加大学生创新创业训练项目和各类软件设计大赛，指导学生项目获得2012年、2013年
+                    、2014年国家级大学生创新项目立项，2012年、2014年获得全国软件专业人才设计与创新大赛优秀指导老师。获得2012届、2013届、
+                    2014届、2015届、2016届贺州学院优秀毕业设计指导教师，2011-2012年度贺州学院优秀教师，2011-2012年度贺州学院优秀班主任，
+                    2012-2013年度贺州学院优秀学生工作者，2013年度学风建设工作先进个人，2014年度毕业生就业工作先进个人，2014-2016年度“十佳教师党员”，2016年获得广西高校优秀共产党员等荣誉。</p>
+            </div>
+            <hr/>
+            <img src="images/teacher/teacher8.jpg" alt="" class="image featured" style="float: left"/>
+            <div style="text-indent: 2em">
+                <p>
+                    <b>谭晓东</b>，工学硕士，讲师，双师型教师，数学与计算机学院实验教学中心实验室主任。2008年硕士毕业于东华理工大学计算机应用技术专业，研究方向为算法、网络技术等。在国际国内刊物上发表学术论文数篇，主持院级科研课题2项，参与省部级科研课题4项。近几年曾两次获年度考核优秀等级，2013年获学校评估工作先进个人荣誉称号。
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--<div class="container">
+        <div class="row">
+            <div class="4u" id="sidebar">
+
+            </div>
+            <div class="8u skel-cell-mainContent" id="content">
+                <article id="main">
+                    &lt;!&ndash;<header>
+                        <h2><a href="#">Left Sidebar</a></h2>
+									<span class="byline">
+										Morbi convallis lectus malesuada sed fermentum dolore amet
+									</span>
+                    </header>&ndash;&gt;
+                    <img src="images/teacher/teacher1.jpg" alt="" class="image featured" style="float: left"/>
+                    <div style="text-indent: 2em">
+                        <p>
+                            覃德泽，教授，贺州学院数学与计算机学院党总支书记。1999年毕业于广西师范大学无线电电子学专业、计算机应用方向研究生班（脱产两年），教育部资助的高校青年骨干教师国内访问学者（武汉大学，2008.9-2009.7，脱产）。
+                        </p><p>主要讲授《计算机网络工程》、《路由协议与概念》、《LAN交换与无线》、《接入WAN》等课程。研究方向为计算机网络安全、计算机网络安全风险评估等。
+                        </p><p>多年来主持自治区级（省级）项目3项，参与自治区级（省级）项目4项，主持地（厅）级项目5项，参与地（厅）级项目1项；在国际国内刊物、学术会议上发布学术论文30多篇，其中独立完成或第一作者20余篇；主编高校教材2部，参编高校教材1部。
+                        </p><p>主持完成的《立体化教材建设与推广应用》课题获"十一五" 广西教育科学研究优秀成果二等奖，以第二作者完成的《计算机应用基础学习网（网络版）》课件获得第十一届（2011年）全国多媒体课件大赛高教工科组二等奖。主持完成的《大学计算机基础课程改革与实践》课题获贺州学院第三届（2012年）教学成果一等奖。
+                        </p><p>现任广西高教学会计算机基础教育专业委员会常务理事，贺州市计算机学会理事长，《贺州学院学报》编委。被评为2005-2007年度贺州市优秀教师，2003-2004年度梧州师专（贺州学院前身）“十佳教师”。
+                        </p>
+                    </div>
+                    <hr/>
+                    <section>
+                        <img src="images/teacher/teacher2.jpg" alt="" class="image featured" style="float: left"/>
+                        <div style="text-indent: 2em">
+                            <p>
+                                梁海英，工学博士，教授，双师型教师，数学与计算机学院院长、党总支副书记，吉林师范大学计算机应用技术专业硕士生导师，吉林省高校计算机共同课教学专业委员会理事，广西工业创新发展项目计划专家，广西工业设计奖评审专家。1991年7月本科毕业于东北重型机械学院计算机及应用专业，2003年7月硕士毕业于东北大学计算机应用技术专业，2008年3月博士毕业于东北大学计算机应用技术专业。
+                            </p><p> 研究方向为计算机网络安全与管理。在国际国内刊物、学术会议上发表教研和科研学术论文30余篇，其中被SCI、EI、ISTP收录的论文近10篇；主持省部级以上教学和科研项目3项，参与国家自然科学基金项目2项、参与省部级教学和科研项目8项，主持厅级科研项目3项，主持校级教研和科研项目6项；主编国家级教材主编7部（其中国家规划教材1部），第二编著4部。
+                            </p><p>获市科技进步二等奖2项，获省优秀教材二等奖1项，省高等学校教育技术成果评比一等奖1项，校教学成果一等奖1项，校级教学改革与管理先进个人1项，校级先进工作者3项，校级课堂教学质量评价优秀奖7项，获教学管理先进集体2项、教学管理先进个人1项，校级优秀毕业论文指导教师1项；建成省级特色专业1个，省级优秀教学团队1个，校级优秀教学团队1个，省级优秀课程6门，省级精品课程2门。
+                            </p><p>全国ITAT教育工程就业技能大赛最佳指导老师奖1项，优秀指导老师奖2项，学科竞赛国家级一等奖1项，国家级三等奖7项，省级三等奖7项；优秀共产党员3项，三八红旗手2项。</p>
+                        </div>
+                    </section>
+                    <hr/>
+                    <section>
+                        <img src="images/teacher/teacher3.jpg" alt="" class="image featured" style="float: left"/>
+                        <div style="text-indent: 2em">
+                            <p>
+                                赵天寿，数学与计算机学院客座教授，博士生导师，享受国务院颁发的政府特殊津贴。曾任中国科学院计算机中心软件研究室副主任，中央财经大学信息管理系主任，国家卫星气象中心副总工程师，财政部部署院校校园网建设专家委员会主任等职务。承担国家和十余个部、委、省、市立项的重大计算机与信息化工程建设项目和国家科技攻关课题达20余项，先后荣获国家科学技术进步奖一等奖，北京市科学技术进步奖特等奖及中科院、中央多个部委颁发的国家认定的二等以上科技成果奖项7项。</p>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+
+<!-- Footer -->
+<div id="footer">
+    <!--<hr />-->
+    <div class="copyright">
+        <ul class="menu">
+            <li>&copy; HezhouUniversity. All rights reserved.</li>
+            <li><a href="#" target="_blank" title="贺州学院">贺州学院</a></li>
+
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
